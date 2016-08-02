@@ -1,0 +1,5 @@
+C:\TFS\OperationPortal\20.40SourceCode\OpsPortal\Database1\bin\Debug\Database1.dacpac
+C:\TFS\OperationPortal\20.40SourceCode\OpsPortal\Database1\bin\Debug\Database1.dll
+C:\TFS\OperationPortal\20.40SourceCode\OpsPortal\Database1\bin\Debug\Database1.pdb
+C:\TFS\OperationPortal\20.40SourceCode\OpsPortal\Database1\obj\Debug\Database1.dll
+C:\TFS\OperationPortal\20.40SourceCode\OpsPortal\Database1\obj\Debug\Database1.pdb

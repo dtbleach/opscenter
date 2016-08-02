@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="4bcb0962-525e-4cad-a2c2-dd09a44aeb47" name="Activity1" linkedPackageId="8ae707fe-e70d-46c7-a8bf-d156a2117c76" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="363c6535-922f-40d0-b1cf-16538d4cab9c" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="8562def3-869d-48ee-8a4e-3f6570daa3ee" />
+        <nodes>
+          <initialNode Id="caa7e1a5-09eb-47d9-96b0-35864b924ab4" name="Initial1" isLeaf="false">
+            <elementDefinition Id="58ae91be-fa37-41c2-8d69-667c2d02ecc6" />
+            <flowNodeTargets>
+              <controlFlow Id="da4e5cbd-ef85-4663-a608-e38440d41742" isLeaf="false">
+                <opaqueActionMoniker Id="b907db8a-d248-46ed-ae89-1e1b56d423c9" LastKnownName="Action1" />
+                <elementDefinition Id="2a57eebb-88e9-4bd7-ae35-6941c8dd99c9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="b907db8a-d248-46ed-ae89-1e1b56d423c9" name="Action1" isLeaf="false">
+            <elementDefinition Id="026174bd-3ab0-43d9-8778-58334dc66226" />
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="8ae707fe-e70d-46c7-a8bf-d156a2117c76" name="ModelingProject1">
+    <elementDefinition Id="430e9df8-2a09-4e7f-acb3-d32df9db53fe" />
+  </package>
+</activityRootModel>

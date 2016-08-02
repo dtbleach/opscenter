@@ -1,0 +1,107 @@
+﻿@model OpsPortal.Entities.ReleaseJobEntity
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReleaseJobEntity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleasePlanEntity.DevOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleasePlanEntity.DevOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeploymentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeploymentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinishedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinishedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeploymentLogPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeploymentLogPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeployServicePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeployServicePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeployPackageArchivePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeployPackageArchivePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateAt)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

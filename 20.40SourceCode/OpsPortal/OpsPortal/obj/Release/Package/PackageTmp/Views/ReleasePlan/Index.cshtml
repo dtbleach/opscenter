@@ -1,0 +1,154 @@
+﻿@model IEnumerable<OpsPortal.Entities.ReleasePlanEntity>
+
+@{
+    ViewBag.Title = "Release Plan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Release Plan</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th> Release Date
+            @*@Html.DisplayNameFor(model => model.PlannedReleaseAt)*@
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.DevOwner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpsOwner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestOwner)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.ProductOwner)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.NotificationList)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotificationCcList)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseNotes)
+        </th>
+        <th> Git Tag
+            @*@Html.DisplayNameFor(model => model.GitRepoTag)*@
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.GitRepoRefTag)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.GitRepoCommitId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JenkinsBuildNo)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.RepleasePackageName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseEnv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ServiceGitPath)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CreateBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateAt)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlannedReleaseAt)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.DevOwner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpsOwner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestOwner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductOwner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotificationList)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotificationCcList)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.ReleaseNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GitRepoTag)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.GitRepoRefTag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GitRepoCommitId)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.JenkinsBuildNo)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.RepleasePackageName)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.ReleaseEnv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ServiceGitPath)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CreateBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateAt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateAt)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

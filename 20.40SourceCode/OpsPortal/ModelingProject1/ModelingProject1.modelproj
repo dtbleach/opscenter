@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3a785ee6-9cf2-4214-a4b7-deb37fc84d07}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>ModelingProject1</Name>
+    <RootNamespace>ModelingProject1</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="ActivityDiagram\UMLActivityDiagram1.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ActivityDiagram\UMLActivityDiagram1.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ActivityDiagram\UMLActivityDiagram1.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagram\ReleaseJob.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagram\ReleaseJob.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagram\ReleaseJob.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagram\ReleasePlan.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagram\ReleasePlan.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagram\ReleasePlan.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagram\UserLogin.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagram\UserLogin.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagram\UserLogin.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UseCase.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UseCase.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UseCase.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\ModelingProject1.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="ActivityDiagram" />
+    <Folder Include="SequenceDiagram" />
+  </ItemGroup>
+</Project>

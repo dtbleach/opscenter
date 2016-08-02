@@ -1,0 +1,187 @@
+﻿@model OpsPortal.Entities.ReleasePlanEntity
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReleasePlanEntity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlannedReleaseAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlannedReleaseAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DevOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DevOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpsOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpsOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TestOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TestOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotificationList)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotificationList)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotificationCcList)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotificationCcList)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GitRepoTag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GitRepoTag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GitRepoRefTag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GitRepoRefTag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GitRepoCommitId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GitRepoCommitId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JenkinsBuildNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JenkinsBuildNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepleasePackageName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepleasePackageName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseEnv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseEnv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Service)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Service)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceGitPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceGitPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateAt)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

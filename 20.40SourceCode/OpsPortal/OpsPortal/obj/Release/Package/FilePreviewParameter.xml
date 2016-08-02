@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="bmwpos" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\TFS\\OperationPortal\\20\.40SourceCode\\OpsPortal\\OpsPortal\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\TFS\\OperationPortal\\20\.40SourceCode\\OpsPortal\\OpsPortal\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="bmwone_opscenter_db-Web.config Connection String" description="" value="Data Source=tcp:i5udl10c5v.database.chinacloudapi.cn,1433;Initial Catalog=bmwone_opscenter_db;User Id=telemetry_admin@i5udl10c5v;Password=1qazxsw@" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\TFS\\OperationPortal\\20\.40SourceCode\\OpsPortal\\OpsPortal\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='bmwone_opscenter_db']/@connectionString" />
+  </parameter>
+</parameters>

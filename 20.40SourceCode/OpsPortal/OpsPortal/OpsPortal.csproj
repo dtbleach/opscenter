@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B8462AE-0AB2-4061-9E0A-9E0BE7B3B400}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpsPortal</RootNamespace>
+    <AssemblyName>OpsPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.3.2.0\lib\net45\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\Bootstrap.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Attributes\ApiKeyAuthorizeAttribute.cs" />
+    <Compile Include="Attributes\RequireApiHttpsAttribute.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JenkinsJobApiController.cs" />
+    <Compile Include="Controllers\JenkinsJobController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ReleaseJobController.cs" />
+    <Compile Include="Controllers\ReleasePlanController.cs" />
+    <Compile Include="Core\Disposable.cs" />
+    <Compile Include="Core\IUnitOfWork.cs" />
+    <Compile Include="Core\ValidationResult.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\JenkinsJobEntiry.cs" />
+    <Compile Include="Entities\OperationAccidentEntity.cs" />
+    <Compile Include="Entities\ReleaseJobEntity.cs" />
+    <Compile Include="Entities\ReleasePlanEntity.cs" />
+    <Compile Include="EntityConfigurations\JenkinsJobConfiguration.cs" />
+    <Compile Include="EntityConfigurations\ReleaseJobConfiguration.cs" />
+    <Compile Include="EntityConfigurations\ReleasePlanConfiguration.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\ApiControllerInstaller.cs" />
+    <Compile Include="Infrastructure\ControllerInstaller.cs" />
+    <Compile Include="Infrastructure\RepositoriesInstaller.cs" />
+    <Compile Include="Infrastructure\ServiceConfigurationInstaller.cs" />
+    <Compile Include="Infrastructure\WindsorControllerFactory.cs" />
+    <Compile Include="Infrastructure\WindsorDependencyResolver.cs" />
+    <Compile Include="Infrastructure\WindsorDependencyScope.cs" />
+    <Compile Include="Migrations\201607290554386_Initdata07.cs" />
+    <Compile Include="Migrations\201607290554386_Initdata07.Designer.cs">
+      <DependentUpon>201607290554386_Initdata07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Enums\OpsPortalEnums.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BmwOneOpsCenterEntities.cs" />
+    <Compile Include="Repositories\JenkinsJobRepository.cs" />
+    <Compile Include="Repositories\OpsPortalDatabaseFactory.cs" />
+    <Compile Include="Repositories\OpsPortalUnitOfWork.cs" />
+    <Compile Include="Repositories\ReleaseJobRepository.cs" />
+    <Compile Include="Repositories\ReleasePlanRepository.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="ServiceConfiguration\IOpsPortalConfiguration.cs" />
+    <Compile Include="ServiceConfiguration\OpsPortalConfiguration.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bootstrap\js\bootstrap-datetimepicker.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ar.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.az.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.bg.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.bn.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ca.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.cs.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.da.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.de.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ee.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.el.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.es.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.fi.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.fr.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.he.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.hr.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.hu.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.hy.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.id.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.is.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.it.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ja.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ka.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ko.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.lt.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.lv.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ms.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.nb.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.nl.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.no.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.pl.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.pt-BR.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.pt.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ro.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.rs-latin.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.rs.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ru.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.sk.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.sl.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.sv.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.sw.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.th.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.tr.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.ua.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.uk.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="Content\bootstrap\js\locales\bootstrap-datetimepicker.zh-TW.js" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Desgin\opscenter\createjob.html" />
+    <Content Include="Desgin\opscenter\createplan.html" />
+    <Content Include="Desgin\opscenter\data\document.js" />
+    <Content Include="Desgin\opscenter\data\styles.css" />
+    <Content Include="Desgin\opscenter\files\createjob\data.js" />
+    <Content Include="Desgin\opscenter\files\createjob\styles.css" />
+    <Content Include="Desgin\opscenter\files\createplan\data.js" />
+    <Content Include="Desgin\opscenter\files\createplan\styles.css" />
+    <Content Include="Desgin\opscenter\files\jenkinsjob\data.js" />
+    <Content Include="Desgin\opscenter\files\jenkinsjob\styles.css" />
+    <Content Include="Desgin\opscenter\files\login\data.js" />
+    <Content Include="Desgin\opscenter\files\login\styles.css" />
+    <Content Include="Desgin\opscenter\files\register\data.js" />
+    <Content Include="Desgin\opscenter\files\register\styles.css" />
+    <Content Include="Desgin\opscenter\files\releasejob\data.js" />
+    <Content Include="Desgin\opscenter\files\releasejob\styles.css" />
+    <Content Include="Desgin\opscenter\files\releaseplan\data.js" />
+    <Content Include="Desgin\opscenter\files\releaseplan\styles.css" />
+    <Content Include="Desgin\opscenter\files\首页\data.js" />
+    <Content Include="Desgin\opscenter\files\首页\styles.css" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u384.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u386.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u388.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u390.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u392.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u394.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u396.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u398.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u400.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u402.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u404.png" />
+    <Content Include="Desgin\opscenter\images\jenkinsjob\u406.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u288.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u290.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u292.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u294.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u296.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u300.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u302.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u304.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u306.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u308.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u310.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u312.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u314.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u316.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u320.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u322.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u324.png" />
+    <Content Include="Desgin\opscenter\images\releasejob\u326.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u165.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u167.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u169.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u171.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u173.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u175.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u177.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u179.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u181.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u183.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u185.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u187.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u189.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u191.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u193.png" />
+    <Content Include="Desgin\opscenter\images\releaseplan\u195.png" />
+    <Content Include="Desgin\opscenter\images\首页\u0.png" />
+    <Content Include="Desgin\opscenter\images\首页\u26.png" />
+    <Content Include="Desgin\opscenter\images\首页\u28.png" />
+    <Content Include="Desgin\opscenter\images\首页\u30.png" />
+    <Content Include="Desgin\opscenter\images\首页\u38.png" />
+    <Content Include="Desgin\opscenter\images\首页\u40.png" />
+    <Content Include="Desgin\opscenter\images\首页\u42.png" />
+    <Content Include="Desgin\opscenter\images\首页\u44.png" />
+    <Content Include="Desgin\opscenter\images\首页\u50.png" />
+    <Content Include="Desgin\opscenter\images\首页\u52.png" />
+    <Content Include="Desgin\opscenter\images\首页\u54.png" />
+    <Content Include="Desgin\opscenter\images\首页\u56.png" />
+    <Content Include="Desgin\opscenter\images\首页\u58.png" />
+    <Content Include="Desgin\opscenter\images\首页\u76_seg0.png" />
+    <Content Include="Desgin\opscenter\images\首页\u76_seg1.png" />
+    <Content Include="Desgin\opscenter\images\首页\u78_seg0.png" />
+    <Content Include="Desgin\opscenter\images\首页\u80_seg0.png" />
+    <Content Include="Desgin\opscenter\images\首页\u84_seg0.png" />
+    <Content Include="Desgin\opscenter\images\首页\u88_seg0.png" />
+    <Content Include="Desgin\opscenter\index.html" />
+    <Content Include="Desgin\opscenter\jenkinsjob.html" />
+    <Content Include="Desgin\opscenter\login.html" />
+    <Content Include="Desgin\opscenter\plugins\debug\debug.js" />
+    <Content Include="Desgin\opscenter\plugins\debug\styles\debug.css" />
+    <Content Include="Desgin\opscenter\plugins\debug\styles\images\reset.svg" />
+    <Content Include="Desgin\opscenter\plugins\debug\styles\images\reset_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\debug\styles\images\variables_hover.png" />
+    <Content Include="Desgin\opscenter\plugins\debug\styles\images\variables_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\debug\styles\images\variables_off.png" />
+    <Content Include="Desgin\opscenter\plugins\debug\styles\images\variables_off.svg" />
+    <Content Include="Desgin\opscenter\plugins\debug\styles\images\variables_on.png" />
+    <Content Include="Desgin\opscenter\plugins\debug\styles\images\variables_on.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\page_notes.js" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\back.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\back.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\back_hover.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\back_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\footnotes.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\footnotes.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\footnotes_hover.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\footnotes_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\footnotes_on.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\footnotes_on.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\forward.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\forward.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\forward_hover.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\forward_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\notes_hover.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\notes_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\notes_off.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\notes_off.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\notes_on.png" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\images\notes_on.svg" />
+    <Content Include="Desgin\opscenter\plugins\page_notes\styles\page_notes.css" />
+    <Content Include="Desgin\opscenter\plugins\recordplay\recordplay.js" />
+    <Content Include="Desgin\opscenter\plugins\recordplay\styles\recordplay.css" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\sitemap.js" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\079_page_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\086_case_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\225_responsive_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\228_togglenotes_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\229_variables_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\231_event_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\232_search_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\233_hyperlink_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\235_folderclosed_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\236_folderopen_16.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\adaptivecheck.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\flow.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\flow.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\folder_closed.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\folder_closed.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\folder_open.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\folder_open.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\hotspots.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\hotspots.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\hotspots_hover.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\hotspots_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\hotspots_on.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\hotspots_on.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\images.html" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\minus.gif" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\note.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\note.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\page.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\page.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\plus.gif" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\share.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\share.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\share_hover.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\share_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\share_on.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\share_on.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\sitemap_hover.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\sitemap_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\sitemap_off.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\sitemap_off.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\sitemap_on.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\sitemap_on.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\views.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\views.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\views_hover.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\views_hover.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\views_on.png" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\images\views_on.svg" />
+    <Content Include="Desgin\opscenter\plugins\sitemap\styles\sitemap.css" />
+    <Content Include="Desgin\opscenter\register.html" />
+    <Content Include="Desgin\opscenter\releasejob.html" />
+    <Content Include="Desgin\opscenter\releaseplan.html" />
+    <Content Include="Desgin\opscenter\resources\chrome\allow_access.gif" />
+    <Content Include="Desgin\opscenter\resources\chrome\axure_logo.gif" />
+    <Content Include="Desgin\opscenter\resources\chrome\axure_logo.png" />
+    <Content Include="Desgin\opscenter\resources\chrome\chrome.html" />
+    <Content Include="Desgin\opscenter\resources\chrome\extensions_menu.gif" />
+    <Content Include="Desgin\opscenter\resources\chrome\splitter.gif" />
+    <Content Include="Desgin\opscenter\resources\chrome\splitter.png" />
+    <Content Include="Desgin\opscenter\resources\css\axure_rp_page.css" />
+    <Content Include="Desgin\opscenter\resources\css\default.css" />
+    <Content Include="Desgin\opscenter\resources\css\images\images.html" />
+    <Content Include="Desgin\opscenter\resources\css\images\newwindow.gif" />
+    <Content Include="Desgin\opscenter\resources\css\images\note.gif" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="Desgin\opscenter\resources\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Desgin\opscenter\resources\css\jquery-ui-themes.css" />
+    <Content Include="Desgin\opscenter\resources\css\reset.css" />
+    <Content Include="Desgin\opscenter\resources\expand.html" />
+    <Content Include="Desgin\opscenter\resources\images\259_close_12rollover1.png" />
+    <Content Include="Desgin\opscenter\resources\images\259_close_12rollover2.png" />
+    <Content Include="Desgin\opscenter\resources\images\260_collapse_12rollover1.png" />
+    <Content Include="Desgin\opscenter\resources\images\260_collapse_12rollover2.png" />
+    <Content Include="Desgin\opscenter\resources\images\261_expand_12rollover1.png" />
+    <Content Include="Desgin\opscenter\resources\images\261_expand_12rollover2.png" />
+    <Content Include="Desgin\opscenter\resources\images\close.png" />
+    <Content Include="Desgin\opscenter\resources\images\close.svg" />
+    <Content Include="Desgin\opscenter\resources\images\close_hover.png" />
+    <Content Include="Desgin\opscenter\resources\images\close_hover.svg" />
+    <Content Include="Desgin\opscenter\resources\images\divider.png" />
+    <Content Include="Desgin\opscenter\resources\images\divider.svg" />
+    <Content Include="Desgin\opscenter\resources\images\expand.png" />
+    <Content Include="Desgin\opscenter\resources\images\expand.svg" />
+    <Content Include="Desgin\opscenter\resources\images\expand_hover.png" />
+    <Content Include="Desgin\opscenter\resources\images\expand_hover.svg" />
+    <Content Include="Desgin\opscenter\resources\images\images.html" />
+    <Content Include="Desgin\opscenter\resources\images\transparent.gif" />
+    <Content Include="Desgin\opscenter\resources\Other.html" />
+    <Content Include="Desgin\opscenter\resources\reload.html" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\action.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\adaptive.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\annotation.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\axQuery.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\axQuery.std.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\doc.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\drag.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\events.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\expr.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\flyout.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\geometry.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\globals.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\ie.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\init.temp.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\legacy.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\math.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\model.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\move.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\recording.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\repeater.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\sto.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\style.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\tree.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\utils.temp.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\variables.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\viewer.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axure\visibility.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\axutils.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\jquery-1.7.1.min.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\jquery-ui-1.8.10.custom.min.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\messagecenter.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\player\axplayer.js" />
+    <Content Include="Desgin\opscenter\resources\scripts\player\splitter.js" />
+    <Content Include="Desgin\opscenter\start.html" />
+    <Content Include="Desgin\opscenter\start_c_1.html" />
+    <Content Include="Desgin\opscenter\start_g_0.html" />
+    <Content Include="Desgin\opscenter\首页.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\ai.0.15.0-build58334.js" />
+    <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\responsive-embed.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap\mixins\table-row.less" />
+    <Content Include="Content\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap\mixins\size.less" />
+    <Content Include="Content\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap\mixins\resize.less" />
+    <Content Include="Content\bootstrap\mixins\reset-text.less" />
+    <Content Include="Content\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap\mixins\panels.less" />
+    <Content Include="Content\bootstrap\mixins\pagination.less" />
+    <Content Include="Content\bootstrap\mixins\opacity.less" />
+    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap\mixins\list-group.less" />
+    <Content Include="Content\bootstrap\mixins\labels.less" />
+    <Content Include="Content\bootstrap\mixins\image.less" />
+    <Content Include="Content\bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap\mixins\grid.less" />
+    <Content Include="Content\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap\mixins\gradients.less" />
+    <Content Include="Content\bootstrap\mixins\forms.less" />
+    <Content Include="Content\bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap\mixins\center-block.less" />
+    <Content Include="Content\bootstrap\mixins\buttons.less" />
+    <Content Include="Content\bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap\mixins\alerts.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\_bootstrap-datetimepicker.less" />
+    <Content Include="Content\bootstrap-datetimepicker-build.less" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Desgin\opscenter\resources\chrome\axure-chrome-extension.crx" />
+    <None Include="Properties\PublishProfiles\bmwpos - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\bmwpos - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ReleasePlan\Create.cshtml" />
+    <Content Include="Views\ReleasePlan\Delete.cshtml" />
+    <Content Include="Views\ReleasePlan\Details.cshtml" />
+    <Content Include="Views\ReleasePlan\Edit.cshtml" />
+    <Content Include="Views\ReleasePlan\Index.cshtml" />
+    <Content Include="Views\ReleaseJob\Create.cshtml" />
+    <Content Include="Views\ReleaseJob\Delete.cshtml" />
+    <Content Include="Views\ReleaseJob\Details.cshtml" />
+    <Content Include="Views\ReleaseJob\Edit.cshtml" />
+    <Content Include="Views\ReleaseJob\Index.cshtml" />
+    <Content Include="Views\JenkinsJob\Create.cshtml" />
+    <Content Include="Views\JenkinsJob\Delete.cshtml" />
+    <Content Include="Views\JenkinsJob\Details.cshtml" />
+    <Content Include="Views\JenkinsJob\Edit.cshtml" />
+    <Content Include="Views\JenkinsJob\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Desgin\opscenter\images\createjob\" />
+    <Folder Include="Desgin\opscenter\images\createplan\" />
+    <Folder Include="Desgin\opscenter\images\login\" />
+    <Folder Include="Desgin\opscenter\images\register\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607290554386_Initdata07.resx">
+      <DependentUpon>201607290554386_Initdata07.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56168</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56168/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

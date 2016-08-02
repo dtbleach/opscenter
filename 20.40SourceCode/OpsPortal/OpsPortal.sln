@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpsPortal", "OpsPortal\OpsPortal.csproj", "{2B8462AE-0AB2-4061-9E0A-9E0BE7B3B400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpsPortal.Tests", "OpsPortal.Tests\OpsPortal.Tests.csproj", "{100EC68C-1B27-41FF-B5A1-82C65BF5F51C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database1", "Database1\Database1.sqlproj", "{4181854F-3190-4D8A-8C57-EAB72520FB27}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{3A785EE6-9CF2-4214-A4B7-DEB37FC84D07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B8462AE-0AB2-4061-9E0A-9E0BE7B3B400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8462AE-0AB2-4061-9E0A-9E0BE7B3B400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B8462AE-0AB2-4061-9E0A-9E0BE7B3B400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B8462AE-0AB2-4061-9E0A-9E0BE7B3B400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{100EC68C-1B27-41FF-B5A1-82C65BF5F51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{100EC68C-1B27-41FF-B5A1-82C65BF5F51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{100EC68C-1B27-41FF-B5A1-82C65BF5F51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{100EC68C-1B27-41FF-B5A1-82C65BF5F51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4181854F-3190-4D8A-8C57-EAB72520FB27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4181854F-3190-4D8A-8C57-EAB72520FB27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4181854F-3190-4D8A-8C57-EAB72520FB27}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4181854F-3190-4D8A-8C57-EAB72520FB27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4181854F-3190-4D8A-8C57-EAB72520FB27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4181854F-3190-4D8A-8C57-EAB72520FB27}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3A785EE6-9CF2-4214-A4B7-DEB37FC84D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A785EE6-9CF2-4214-A4B7-DEB37FC84D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A785EE6-9CF2-4214-A4B7-DEB37FC84D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A785EE6-9CF2-4214-A4B7-DEB37FC84D07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://leon1986.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = OpsPortal.Tests\\OpsPortal.Tests.csproj
+		SccProjectName1 = OpsPortal.Tests
+		SccLocalPath1 = OpsPortal.Tests
+		SccProjectUniqueName2 = OpsPortal\\OpsPortal.csproj
+		SccProjectName2 = OpsPortal
+		SccLocalPath2 = OpsPortal
+		SccProjectUniqueName3 = Database1\\Database1.sqlproj
+		SccProjectName3 = Database1
+		SccLocalPath3 = Database1
+		SccProjectUniqueName4 = ModelingProject1\\ModelingProject1.modelproj
+		SccProjectName4 = ModelingProject1
+		SccLocalPath4 = ModelingProject1
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm13="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="cb1ff5d7-73e4-43c3-8166-a1a5bd84c145" name="UseCase" linkedPackageId="f56241df-e3cf-4fec-8928-caa9e130215a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="20812f40-c05b-4842-985b-59651623f991" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="4befa92f-9941-4777-a273-3cd75cb336e4" />
+    </stereotypeInstance>
+    <stereotypeInstance Id="b03d7e4d-6b08-4caa-a66d-d859202913b3" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="ff3b5a83-40da-4e8e-8f1b-11b4b246ae0f" />
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9fc26f44-8c49-4638-93de-6e28f2bc0642" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="48d0eb6f-4330-41d7-86d5-4809b31fd225" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b893ff53-67eb-4c1d-923f-de2c4dbd8cba" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d5c4ceb7-b7db-418e-b1cb-fe9cc77c4a8d" />
+        <suppliersInternal>
+          <dependency Id="3cfc1d3b-657a-4fb3-8824-81d048fa6317">
+            <useCaseMoniker Id="9fc26f44-8c49-4638-93de-6e28f2bc0642" LastKnownName="Login" />
+            <elementDefinition Id="ddb26716-3958-42ba-9185-0899cde078e5" />
+          </dependency>
+          <dependency Id="4db2abfb-49ce-4826-baac-3a414a1dc480">
+            <useCaseMoniker Id="2467ca71-6d03-41b1-a1e3-f7ca8d6d5e6e" LastKnownName="Release Plan Management" />
+            <elementDefinition Id="f5396f2c-3889-457d-a1ff-9aa53c04a584" />
+          </dependency>
+          <dependency Id="ae21ceb1-aebb-40e9-b832-2bc740dd0b84">
+            <useCaseMoniker Id="568cb53c-10d1-454f-a3d0-374991be5650" LastKnownName="Production Accident Management" />
+            <elementDefinition Id="837cc5d5-4b2c-4f91-bba6-1b8e1c800e66" />
+          </dependency>
+          <dependency Id="cab625f0-4fc9-4deb-a341-48e1afa3e674">
+            <useCaseMoniker Id="b4f61ed0-8973-4f3c-97ba-06a8eb5c7c47" LastKnownName="Query Jenkins Log" />
+            <elementDefinition Id="cc9b923e-d03e-4ad9-ba8a-c4033a5225ff" />
+          </dependency>
+          <dependency Id="91b17423-45c5-494b-98cc-719542cee8d3">
+            <useCaseMoniker Id="c9c47b66-14e0-4287-ab9c-601b8cd651be" LastKnownName="Release Job Management" />
+            <elementDefinition Id="df3baa1a-9969-4b12-afa3-0861c22418fe" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2467ca71-6d03-41b1-a1e3-f7ca8d6d5e6e" name="Release Plan Management" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="039c7a2e-b092-42a1-ae9b-b5ae7a47514c" />
+        <additions>
+          <include Id="be5a66a4-bd7e-436f-96e7-df221b993db4">
+            <useCaseMoniker Id="805a272b-2c91-4fa8-b1af-623000d5fc94" LastKnownName="Query Release Plan" />
+            <elementDefinition Id="f6bf6d90-7908-43a1-87bf-670c5bfd9525" />
+          </include>
+          <include Id="4fa1b398-560c-4fed-9d6a-33db17136afc">
+            <useCaseMoniker Id="ee900f3d-72db-4cf4-b83c-db22beb441b0" LastKnownName="Create Release Plan" />
+            <elementDefinition Id="a6bed355-8776-460f-8b1f-dbd18b1485d6" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="805a272b-2c91-4fa8-b1af-623000d5fc94" name="Query Release Plan" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0672ec19-874f-446b-b2ea-f1db169d002e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ee900f3d-72db-4cf4-b83c-db22beb441b0" name="Create Release Plan" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="118e558c-6e09-433e-ae2d-90af4e3dd5c5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="568cb53c-10d1-454f-a3d0-374991be5650" name="Production Accident Management" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb3453e3-bf7d-4e6b-b37e-0eccfefd6292" />
+        <additions>
+          <include Id="c1745599-d155-4596-a4e5-53a9c1487186">
+            <useCaseMoniker Id="ada13830-7388-460f-919a-3e4eef5acbf6" LastKnownName="Create Production Accident" />
+            <elementDefinition Id="be7cf38c-97a5-4af1-8c08-78c4c74740b3" />
+          </include>
+          <include Id="86f82b47-9318-46bd-9060-7fea747c2bc7">
+            <useCaseMoniker Id="b2fad7c4-e391-4701-b8dd-c52160e74387" LastKnownName="Query Production Accident" />
+            <elementDefinition Id="3606f48c-dd9b-4dbf-969d-ff0c4112f751" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ada13830-7388-460f-919a-3e4eef5acbf6" name="Create Production Accident" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8ad3d9a2-e669-4b6c-8af5-1fbc53425f83" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b2fad7c4-e391-4701-b8dd-c52160e74387" name="Query Production Accident" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2431b432-4be0-4004-963c-d0b3a62b625a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b4f61ed0-8973-4f3c-97ba-06a8eb5c7c47" name="Query Jenkins Log" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7a7188b2-3a86-4ccc-9853-a1a9e0725fbc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c9c47b66-14e0-4287-ab9c-601b8cd651be" name="Release Job Management" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eb6bf8c7-b7b5-4c25-b51d-8d54f46205cd" />
+        <additions>
+          <include Id="8b0e5f41-c64c-46f9-910f-66bdd3fab416">
+            <useCaseMoniker Id="c7c23076-c790-4c5e-a41b-c85d0a11381c" LastKnownName="Create Release Job" />
+            <elementDefinition Id="eb207104-885e-42c7-828c-f7feb759ba24" />
+          </include>
+          <include Id="71304c55-613a-4cad-9066-80c8fdaa9206">
+            <useCaseMoniker Id="4ffdda43-af95-4670-a52a-1aec10f025c6" LastKnownName="Query Release Job" />
+            <elementDefinition Id="5bc2a915-285e-48e8-8170-266e94a4e39d" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c7c23076-c790-4c5e-a41b-c85d0a11381c" name="Create Release Job" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d5ff43f9-5135-44e7-95c0-b0f9d6a97c7a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4ffdda43-af95-4670-a52a-1aec10f025c6" name="Query Release Job" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="609c78cc-e30a-49bb-b21a-d2dcdc0b75ea" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="f56241df-e3cf-4fec-8928-caa9e130215a" name="ModelingProject1">
+    <elementDefinition Id="430e9df8-2a09-4e7f-acb3-d32df9db53fe" />
+  </package>
+</useCaseModelRoot>

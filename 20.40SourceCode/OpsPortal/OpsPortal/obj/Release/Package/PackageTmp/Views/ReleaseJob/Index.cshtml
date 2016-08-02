@@ -1,0 +1,290 @@
+﻿@model IEnumerable<OpsPortal.Entities.ReleaseJobEntity>
+
+@{
+    ViewBag.Title = "Release Job";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Release Job</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleasePlanEntity.Service)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleasePlanEntity.GitRepoTag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinishedAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeploymentLogPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeployServicePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeployPackageArchivePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeploymentStatus)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CreateAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateBy)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+          <a href="javascript:void(0);" onclick="clickNo($(this).parent())">@Html.DisplayFor(modelItem => item.ReleasePlanEntity.Service)</a>
+        </td>
+        <td>
+            <a href="javascript:void(0);" onclick="clickNo($(this).parent())">@Html.DisplayFor(modelItem => item.ReleasePlanEntity.GitRepoTag)</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartAt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinishedAt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeploymentLogPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeployServicePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeployPackageArchivePath)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateAt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeploymentStatus)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CreateBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateAt)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) 
+            @*@Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+        </td>
+    </tr>
+    <tr style="display:none">
+        <td colspan="10">
+            <div>
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.PlannedReleaseAt)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.PlannedReleaseAt)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.DevOwner)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.DevOwner)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.OpsOwner)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.OpsOwner)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.TestOwner)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.TestOwner)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.ProductOwner)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.ProductOwner)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.NotificationList)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.NotificationList)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.NotificationCcList)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.NotificationCcList)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.ReleaseNotes)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.ReleaseNotes)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.GitRepoTag)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.GitRepoTag)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.GitRepoRefTag)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.GitRepoRefTag)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.GitRepoCommitId)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.GitRepoCommitId)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.JenkinsBuildNo)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.JenkinsBuildNo)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.RepleasePackageName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.RepleasePackageName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.ReleaseEnv)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.ReleaseEnv)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.Service)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.Service)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.ServiceGitPath)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.ServiceGitPath)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.Status)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.Status)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.CreateBy)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.CreateBy)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.CreateAt)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.CreateAt)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.UpdateBy)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.UpdateBy)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ReleasePlanEntity.UpdateAt)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.ReleasePlanEntity.UpdateAt)
+    </dd>
+
+</dl>
+</div>
+        </td>
+    </tr>
+}
+
+</table>
+<script type="text/javascript">
+
+    function clickNo(obj) {
+        if ($(obj).parent().next().css("display") == "none") {
+            $(obj).parent().next().show();
+        } else {
+            $(obj).parent().next().hide();
+        }
+    }
+</script>
